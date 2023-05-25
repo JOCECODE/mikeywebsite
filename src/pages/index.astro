@@ -1,7 +1,7 @@
 ---
 
 import Layout from '../layouts/Layout.astro';
-
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -9,7 +9,7 @@ import Layout from '../layouts/Layout.astro';
 	<header>
 		<div class="navbar">
 		  <button class="menu-btn">&#9776;</button>
-		  <h1 class="navbar-title" style="text-align: center;">Abs. Decision</h1>
+		  <h1 class="navbar-title" style="text-align: center;">Absolute Decision</h1>
 		  <a class="cart-icon" href="#"><i class="fa fa-shopping-cart"></i></a>
 		</div>
 		<div class="drawer">
@@ -47,13 +47,7 @@ import Layout from '../layouts/Layout.astro';
 		  </div>		
 	</container>
 
-	<!-- Color palette to see how it looks delete later -->
-		<p class="text-soft-red">This is some text in soft red.</p>
-		<p class="text-soft-green">This is some text in soft green.</p>
-		<p class="text-soft-cream">This is some text in soft cream.</p>
-		<p class="text-soft-black">This is some text in soft black.</p>
-		<p class="bg-soft-gray">This is some text in soft black.</p>
-	  
+  <Footer/>
 </Layout>
 
 <style>
