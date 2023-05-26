@@ -14,9 +14,9 @@ import Footer from '../components/Footer.astro';
 		  <a class="cart-icon" href="#"><i class="fa fa-shopping-cart"></i></a>
 		</div>
 		<div class="drawer">
-		  <a href="#">Link 1</a>
-		  <a href="#">Link 2</a>
-		  <a href="#">Link 3</a>
+		  <a href="#">About</a>
+		  <a href="#">Privacy Policy</a>
+		  <a href="#">Contact</a>
 		</div>
 	  </header>	 
 
@@ -59,8 +59,13 @@ import Footer from '../components/Footer.astro';
   }
 	#sort-by {
 		font-size: 14px;
+    background-color: transparent;
+    color: #333333;
 	}
 
+  .drawer.open a {
+    color: #f8ecc2;
+  }
 	.container {
   display: grid;
   padding: 10px;
@@ -165,7 +170,7 @@ import Footer from '../components/Footer.astro';
 /* Drawer */
 .drawer {
   display: none;
-  background-color: #333;
+  background-color: #4d4d4d;
   color: white;
   padding: 1rem;
 }
@@ -298,11 +303,25 @@ select option {
 
 <script>
 
-const menuBtn = document.querySelector('.menu-btn');
-const drawer = document.querySelector('.drawer');
+const menuBtn = document.querySelector('.menu-btn') as HTMLElement;
+const drawer = document.querySelector('.drawer') as HTMLElement;
+const everywhere = document.querySelector('body') as HTMLElement;
 
 menuBtn.addEventListener('click', () => {
   drawer.classList.toggle('open');
 });
+
+everywhere.addEventListener('click', (event) => {
+  const clickedElement = event.target as HTMLElement;
+
+  // Check if the clicked element is inside the drawer or the menu button
+  if (!drawer.contains(clickedElement) && !menuBtn.contains(clickedElement)) {
+    // Remove the 'open' class if the drawer is open
+    if (drawer.classList.contains('open')) {
+      drawer.classList.remove('open');
+    }
+  }
+});
+
 
 </script>
