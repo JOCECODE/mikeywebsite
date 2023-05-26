@@ -14,9 +14,9 @@
       </div>
     </div>
     <div class="termslist">
-      <a href="#">Terms of Use</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Contact</a>
+      <a class="terms" href="#">About</a>
+      <a class="terms" href="#">Privacy Policy</a>
+      <a class="terms" href="#">Contact</a>
     </div>
     <p class="copyright">
       &copy; 2023 @BubCorporations. All rights reserved.
@@ -27,7 +27,7 @@
     /* Footer Styles */
     .footer {
       background-color: #f0f0f0;
-      padding: 20px;
+      padding: 0px;
       text-align: center;
       font-size: 14px;
     }
@@ -47,21 +47,33 @@
       display: flex;
       justify-content: space-between;
       margin-top: 20px;
+      padding: 10px 20px;
     }
     
     .card {
       flex-basis: calc(33.33% - 20px);
       border-radius: 8px;
+      background-color: #e0e0e0;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover {
+      background-color: #ff8888;
+      background-color: #424242;
+      cursor: pointer;
     }
     
     .termslist {
-        margin-top: 5%;
+        padding: 20px 20px 10px 20px;
+        display: flex;
+    }
+
+    .terms {
+      flex-basis: calc(33.33% - 20px);
     }
     
     /* Copyright Styles */
     .copyright {
       font-size: 12px;
       color: #888;
-      margin-top: 20px;
     }

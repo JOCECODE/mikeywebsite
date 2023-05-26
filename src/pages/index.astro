@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Welcome to Astro.">
+  <div class="custom-wrapper">
 	<!-- Navbar using font awesome -->
 	<header>
 		<div class="navbar">
@@ -47,16 +48,22 @@ import Footer from '../components/Footer.astro';
 		  </div>		
 	</container>
 
-  <Footer/>
+  
+</div>
+<Footer/>
 </Layout>
 
 <style>
+  .custom-wrapper {
+    flex: 1;
+  }
 	#sort-by {
 		font-size: 14px;
 	}
 
 	.container {
   display: grid;
+  padding: 10px;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: minmax(100px, auto);
   grid-gap: 16px;
